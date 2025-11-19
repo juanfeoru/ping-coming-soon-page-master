@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main class="launch">
+      <header class="launch__header">
+        <img
+          src="./images/logo.svg"
+          alt=""
+          width="86"
+          height="26"
+          class="launch__header-logo"
+        />
+      </header>
+
+      <section class="launch__content">
+        <h1 class="launch__content-title">
+          We are launching <span>soon!</span>
+        </h1>
+
+        <p class="launch__content-text">Subscribe and get notified</p>
+
+        <form class="launch__content-form" novalidate>
+          <div class="launch__content-input-wrapper">
+            <input
+              type="email"
+              placeholder="Your email address..."
+              class="launch__content-input"
+            />
+            <small class="launch__content-error"></small>
+          </div>
+          <!-- <p class="launch__content-error">Please provide a valid email address</p> -->
+          <button type="submit" class="launch__content-button">
+            Notify Me
+          </button>
+        </form>
+
+        <div class="launch__content-wrapper">
+          <img
+            src="./images/illustration-dashboard.png"
+            alt=""
+            width="1280"
+            height="782"
+            class="launch__content-image"
+            alt="Dashboard illustration showing app interface"
+          />
+        </div>
+      </section>
+
+      <footer class="launch__footer">
+        <ul class="launch__footer-social-list">
+          <li>
+            <a href="#" class="launch__footer-social-link">
+              <span class="launch__footer-social-icon">
+                <box-icon type="logo" name="facebook"></box-icon>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="launch__footer-social-link">
+              <span class="launch__footer-social-icon">
+                <box-icon type="logo" name="twitter"></box-icon>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="launch__footer-social-link">
+              <span class="launch__footer-social-icon">
+                <box-icon type="logo" name="instagram"></box-icon> </span
+            ></a>
+          </li>
+        </ul>
+        <small class="launch__footer-copyright"
+          >&copy; Copyright Ping. All rights reserved</small
+        >
+      </footer>
+    </main>
+  </body>
+</html>
