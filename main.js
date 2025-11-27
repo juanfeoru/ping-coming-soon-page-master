@@ -1,14 +1,17 @@
-const input = document.querySelector(".launch__content-input");
-const form = document.querySelector(".launch__content-form");
+const input = document.querySelector("input");
+const form = document.querySelector("form");
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const inputWrapper = document.querySelector(".launch__content-input-wrapper");
-const previousError = form.querySelector(".launch__content-error");
+const inputWrapper = document.querySelector(".wrapper");
+const previousError = form.querySelector(".error");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const value = input.value.trim();
 
-  input.classList.remove("active");
+  input.classList.remove(
+    "border-[var(--red-400)]",
+    "focus:border-[var(--red-400)]"
+  );
   previousError.textContent = "";
 
   if (value === "") {
@@ -19,7 +22,9 @@ form.addEventListener("submit", (e) => {
 });
 
 function showError(message) {
-  input.classList.add("active");
-  input.classList.add("placeholder");
+  input.classList.add(
+    "border-[var(--red-400)]",
+    "focus:border-[var(--red-400)]"
+  );
   previousError.textContent = message;
 }

@@ -22,79 +22,108 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script type="module" src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <main class="launch">
-      <header class="launch__header">
+
+  <body
+    class="font-[Libre_Franklin] m-8 text-center min-h-screen lg:flex lg:justify-center"
+  >
+    <main class="flex flex-col gap-8 p-8">
+      <header>
         <img
           src="./images/logo.svg"
           alt=""
           width="86"
           height="26"
-          class="launch__header-logo"
+          class="mx-auto mt-4 w-16 lg:w-20"
         />
       </header>
 
-      <section class="launch__content">
-        <h1 class="launch__content-title">
-          We are launching <span>soon!</span>
+      <section>
+        <h1 class="text-xl font-light text-[var(--gray-400)] lg:text-4xl">
+          We are launching
+          <span class="font-bold text-[var(--blue-950)]">soon!</span>
         </h1>
 
-        <p class="launch__content-text">Subscribe and get notified</p>
+        <p class="mt-4 text-sm text-[var(--blue-950)] font-light lg:text-lg">
+          Subscribe and get notified
+        </p>
 
-        <form class="launch__content-form" novalidate>
-          <div class="launch__content-input-wrapper">
+        <form
+          class="mt-4 lg:flex lg:justify-center lg:items-start lg:gap-4"
+          novalidate
+        >
+          <div class="wrapper flex flex-col lg:w-96">
             <input
               type="email"
               placeholder="Your email address..."
-              class="launch__content-input"
+              class="border border-[var(--blue-200)] p-2 pl-6 text-xs font-light w-full rounded-3xl px-16 placeholder:text-[var(--blue-200)] focus:border-[var(--blue-500)] focus:outline-none lg:p-4 lg:text-sm lg:pl-6 lg:rounded-full"
             />
-            <small class="launch__content-error"></small>
+            <small
+              class="error text-[var(--red-400)] font-light italic mt-2 text-xs flex justify-center"
+            ></small>
           </div>
-          <!-- <p class="launch__content-error">Please provide a valid email address</p> -->
-          <button type="submit" class="launch__content-button">
+
+          <button
+            type="submit"
+            class="mt-4 bg-[var(--blue-500)] shadow-xl shadow-[var(--blue-500)] rounded-3xl text-white text-xs w-full p-3 font-semibold cursor-pointer hover:bg-[hsla(223,_87%,_63%,_.9)] lg:p-4 lg:max-w-40 lg:text-sm lg:mt-0 lg:rounded-full"
+          >
             Notify Me
           </button>
         </form>
 
-        <div class="launch__content-wrapper">
+        <div class="mt-8">
           <img
             src="./images/illustration-dashboard.png"
             alt=""
             width="1280"
             height="782"
-            class="launch__content-image"
+            class="lg:max-w-lg"
             alt="Dashboard illustration showing app interface"
           />
         </div>
       </section>
 
-      <footer class="launch__footer">
-        <ul class="launch__footer-social-list">
+      <footer>
+        <ul class="flex justify-center gap-2">
           <li>
-            <a href="#" class="launch__footer-social-link">
-              <span class="launch__footer-social-icon">
-                <box-icon type="logo" name="facebook"></box-icon>
+            <a href="#">
+              <span
+                class="border border-[var(--blue-200)] rounded-full flex items-center justify-center p-1 fill-[var(--blue-500)] hover:bg-[var(--blue-500)] hover:fill-white"
+              >
+                <box-icon
+                  type="logo"
+                  name="facebook"
+                  class="w-5 h-5"
+                ></box-icon>
               </span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="launch__footer-social-link">
-              <span class="launch__footer-social-icon">
-                <box-icon type="logo" name="twitter"></box-icon>
+            <a href="#">
+              <span
+                class="border border-[var(--blue-200)] rounded-full flex items-center justify-center p-1 fill-[var(--blue-500)] hover:bg-[var(--blue-500)] hover:fill-white"
+              >
+                <box-icon type="logo" name="twitter" class="w-5 h-5"></box-icon>
               </span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="launch__footer-social-link">
-              <span class="launch__footer-social-icon">
-                <box-icon type="logo" name="instagram"></box-icon> </span
+            <a href="#">
+              <span
+                class="border border-[var(--blue-200)] mb-4 rounded-full flex items-center justify-center p-1 fill-[var(--blue-500)] hover:bg-[var(--blue-500)] hover:fill-white"
+              >
+                <box-icon
+                  type="logo"
+                  name="instagram"
+                  class="w-5 h-5"
+                ></box-icon> </span
             ></a>
           </li>
         </ul>
-        <small class="launch__footer-copyright"
+        <small class="text-xs font-light text-[var(--gray-400)]"
           >&copy; Copyright Ping. All rights reserved</small
         >
       </footer>
